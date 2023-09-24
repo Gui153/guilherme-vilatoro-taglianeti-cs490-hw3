@@ -6,6 +6,7 @@ export const QUERY = gql`
       id
       name
       body
+      postId
       createdAt
     }
   }
@@ -23,7 +24,7 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ comments }) => {
   return (
-    <div className='space-y-8'>
+    <div className="space-y-8">
       {comments.map((comment) => (
         <Comment key={comment.id} comment={comment} />
       ))}
